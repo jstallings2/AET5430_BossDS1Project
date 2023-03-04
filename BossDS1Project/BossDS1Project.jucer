@@ -11,6 +11,11 @@
       <FILE id="Gjb9MU" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="ldhJJr" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <GROUP id="{8C576613-3777-6618-93FA-1428A2CA1A1F}" name="BinaryData">
+        <FILE id="WWWkLr" name="background.png" compile="0" resource="1" file="Source/BinaryData/background.png"/>
+        <FILE id="HtKxww" name="knob_large.png" compile="0" resource="1" file="Source/BinaryData/knob_large.png"/>
+        <FILE id="LT9SzB" name="knob_small.png" compile="0" resource="1" file="Source/BinaryData/knob_small.png"/>
+      </GROUP>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
