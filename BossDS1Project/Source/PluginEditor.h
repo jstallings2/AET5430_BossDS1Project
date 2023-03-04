@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "SmallKnob.h"
 
 //==============================================================================
 /**
@@ -32,7 +33,7 @@ private:
     // access the processor object that created it.
     BossDS1ProjectAudioProcessor& audioProcessor;
     
-    juce::Image smallKnob;
+    //SmallKnob* smallKnobLNF;
     
     // Dist Knob
     juce::Slider distKnob;

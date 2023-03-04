@@ -46,12 +46,13 @@ BossDS1ProjectAudioProcessorEditor::BossDS1ProjectAudioProcessorEditor (BossDS1P
     addAndMakeVisible(distKnob);
     
     //Tone Knob (left)
+    toneKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
+    //toneKnob.setLookAndFeel(smallKnobLNF);
     toneKnob.addListener(this);
     // Specify location in window (xPos,yPos,width,height)
     toneKnob.setBounds(23,5,100,100);
     toneKnob.setValue(0.5); // initial value
     toneKnob.setRange(0,1); // (min, max, interval)
-    toneKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
     toneKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 75, 25);
     toneKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::green);
     addAndMakeVisible(toneKnob);
@@ -74,7 +75,6 @@ void BossDS1ProjectAudioProcessorEditor::paint (juce::Graphics& g)
         g.setColour (juce::Colours::cornflowerblue);
         g.setFont (35.0f);
         g.drawFittedText ("Text", getLocalBounds(), juce::Justification::centred, 1);
-        g.drawImageAt(smallKnob,0,0);
     g.setColour(juce::Colours::darkgrey);
         g.fillRoundedRectangle(4, 350, 292, 146, 10); // foot pad
     

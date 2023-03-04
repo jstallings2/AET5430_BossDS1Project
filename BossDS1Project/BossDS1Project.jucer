@@ -3,6 +3,10 @@
 <JUCERPROJECT id="VQkVZn" name="BossDS1Project" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="VZsNVy" name="BossDS1Project">
+    <GROUP id="{B8EB222F-8781-4599-C0BA-EAF76FC0F3CE}" name="Components">
+      <FILE id="ywqjCq" name="SmallKnob.cpp" compile="1" resource="0" file="Source/SmallKnob.cpp"/>
+      <FILE id="RlQXPJ" name="SmallKnob.h" compile="0" resource="0" file="Source/SmallKnob.h"/>
+    </GROUP>
     <GROUP id="{E6E834F5-CA53-E0D6-4E71-A5D553FC0A21}" name="Source">
       <FILE id="VYBF7k" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
