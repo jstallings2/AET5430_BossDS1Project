@@ -24,15 +24,39 @@ BossDS1ProjectAudioProcessorEditor::BossDS1ProjectAudioProcessorEditor (BossDS1P
     // Draw black rectangle (part where the foot goes)
     // Draw and initialize knobs
     
-    // Level Knob
+    // Level Knob (center)
     levelKnob.addListener(this);
     // Specify location in window (xPos,yPos,width,height)
-    levelKnob.setBounds(100,50,125,125);
-    levelKnob.setValue(0.0); // initial value
-    levelKnob.setRange(-48.0,12.0,0.1); // (min, max, interval)
+    levelKnob.setBounds(112,90,75,75);
+    levelKnob.setValue(0.5); // initial value
+    levelKnob.setRange(0,1); // (min, max, interval)
     levelKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
     levelKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 75, 25);
     addAndMakeVisible(levelKnob);
+    
+    //Dist Knob (right)
+    distKnob.addListener(this);
+    // Specify location in window (xPos,yPos,width,height)
+    distKnob.setBounds(175,5,100,100);
+    distKnob.setValue(0.5); // initial value
+    distKnob.setRange(0,1); // (min, max, interval)
+    distKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
+    distKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 75, 25);
+    distKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::red);
+    addAndMakeVisible(distKnob);
+    
+    //Tone Knob (left)
+    toneKnob.addListener(this);
+    // Specify location in window (xPos,yPos,width,height)
+    toneKnob.setBounds(23,5,100,100);
+    toneKnob.setValue(0.5); // initial value
+    toneKnob.setRange(0,1); // (min, max, interval)
+    toneKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
+    toneKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 75, 25);
+    toneKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::green);
+    addAndMakeVisible(toneKnob);
+    
+    
     
     
 }
@@ -67,6 +91,14 @@ void BossDS1ProjectAudioProcessorEditor::sliderValueChanged(juce::Slider * slide
         if (slider == &levelKnob){
             auto value = slider->getValue();
             audioProcessor.level = value;
+        }
+        if (slider == &toneKnob){
+            auto value = slider->getValue();
+            audioProcessor.tone = value;
+        }
+        if (slider == &distKnob){
+            auto value = slider->getValue();
+            audioProcessor.dist = value;
         }
         //DBG(value);
 }

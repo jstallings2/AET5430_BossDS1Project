@@ -35,7 +35,9 @@ private:
     juce::Image smallKnob;
     
     // Dist Knob
+    juce::Slider distKnob;
     // Tone Knob
+    juce::Slider toneKnob;
     // Level Knob
     juce::Slider levelKnob;
 
