@@ -98,5 +98,5 @@ void BossDS1ProjectAudioProcessorEditor::sliderValueChanged(juce::Slider * slide
             auto value = slider->getValue();
             audioProcessor.dist = value;
         }
-        //DBG(value);
+        //DBG(audioProcessor.dist);
 }
