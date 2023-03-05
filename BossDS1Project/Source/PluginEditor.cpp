@@ -17,17 +17,11 @@ BossDS1ProjectAudioProcessorEditor::BossDS1ProjectAudioProcessorEditor (BossDS1P
     // editor's size to whatever you need it to be.
     setSize (300, 500);
     
-    //smallKnob = juce::ImageCache::getFromMemory(BinaryData::knob_small_png, BinaryData::knob_small_pngSize);
-    
-    // Steps:
-    // Draw orange background
-    // Draw black rectangle (part where the foot goes)
-    // Draw and initialize knobs
-    
     // Level Knob (center)
     levelKnob.addListener(this);
+    levelKnob.setLookAndFeel(&smallKnobLNF);
     // Specify location in window (xPos,yPos,width,height)
-    levelKnob.setBounds(112,90,75,75);
+    levelKnob.setBounds(115,90,100,100);
     levelKnob.setValue(0.5); // initial value
     levelKnob.setRange(0,1); // (min, max, interval)
     levelKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
@@ -36,13 +30,13 @@ BossDS1ProjectAudioProcessorEditor::BossDS1ProjectAudioProcessorEditor (BossDS1P
     
     //Dist Knob (right)
     distKnob.addListener(this);
+    distKnob.setLookAndFeel(&smallKnobLNF);
     // Specify location in window (xPos,yPos,width,height)
-    distKnob.setBounds(175,5,100,100);
+    distKnob.setBounds(200,25,100,100);
     distKnob.setValue(0.5); // initial value
     distKnob.setRange(0,1); // (min, max, interval)
     distKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
     distKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 75, 25);
-    distKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::red);
     addAndMakeVisible(distKnob);
     
     //Tone Knob (left)
@@ -50,11 +44,10 @@ BossDS1ProjectAudioProcessorEditor::BossDS1ProjectAudioProcessorEditor (BossDS1P
     toneKnob.setLookAndFeel(&smallKnobLNF);
     toneKnob.addListener(this);
     // Specify location in window (xPos,yPos,width,height)
-    toneKnob.setBounds(23,5,100,100);
+    toneKnob.setBounds(25,25,100,100);
     toneKnob.setValue(0.5); // initial value
     toneKnob.setRange(0,1); // (min, max, interval)
     toneKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 75, 25);
-    toneKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::green);
     addAndMakeVisible(toneKnob);
     
     
