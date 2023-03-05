@@ -33,7 +33,7 @@ private:
     // access the processor object that created it.
     BossDS1ProjectAudioProcessor& audioProcessor;
     
-    //SmallKnob* smallKnobLNF;
+    SmallKnob smallKnobLNF;
     
     // Dist Knob
     juce::Slider distKnob;

@@ -47,7 +47,7 @@ BossDS1ProjectAudioProcessorEditor::BossDS1ProjectAudioProcessorEditor (BossDS1P
     
     //Tone Knob (left)
     toneKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
-    //toneKnob.setLookAndFeel(smallKnobLNF);
+    toneKnob.setLookAndFeel(&smallKnobLNF);
     toneKnob.addListener(this);
     // Specify location in window (xPos,yPos,width,height)
     toneKnob.setBounds(23,5,100,100);
