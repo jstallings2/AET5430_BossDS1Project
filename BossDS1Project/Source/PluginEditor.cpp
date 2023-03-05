@@ -64,12 +64,17 @@ void BossDS1ProjectAudioProcessorEditor::paint (juce::Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
         g.fillAll (juce::Colours::orange);
-
-        g.setColour (juce::Colours::cornflowerblue);
-        g.setFont (35.0f);
-        g.drawFittedText ("Text", getLocalBounds(), juce::Justification::centred, 1);
-    g.setColour(juce::Colours::darkgrey);
+    g.setColour(juce::Colours::black);
         g.fillRoundedRectangle(4, 350, 292, 146, 10); // foot pad
+    g.setFont (24.0f);
+    g.drawText("TONE", 12, 65, 100, 100, juce::Justification::horizontallyCentred);
+    g.drawText("DIST", 187, 65, 100, 100, juce::Justification::horizontallyCentred);
+    g.drawText("LEVEL", 102, 130, 100, 100, juce::Justification::horizontallyCentred);
+    
+    g.setFont(36.f);
+    g.drawText("Distortion", 145, 250, 300, 100, juce::Justification::left);
+    g.drawText("DS-1", 220, 280, 300, 100, juce::Justification::left);
+
     
 }
 
