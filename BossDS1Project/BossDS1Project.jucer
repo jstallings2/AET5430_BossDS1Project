@@ -15,6 +15,12 @@
       <FILE id="Gjb9MU" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="ldhJJr" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="DHsMmu" name="DS1DistortionEffect.cpp" compile="1" resource="0"
+            file="Source/DS1DistortionEffect.cpp"/>
+      <FILE id="H0xJPu" name="DS1DistortionEffect.h" compile="0" resource="0"
+            file="Source/DS1DistortionEffect.h"/>
+      <FILE id="yWErNs" name="AudioEffect.cpp" compile="1" resource="0" file="Source/AudioEffect.cpp"/>
+      <FILE id="IXXCej" name="AudioEffect.h" compile="0" resource="0" file="Source/AudioEffect.h"/>
       <GROUP id="{8C576613-3777-6618-93FA-1428A2CA1A1F}" name="BinaryData">
         <FILE id="WWWkLr" name="background.png" compile="0" resource="1" file="Source/BinaryData/background.png"/>
         <FILE id="HtKxww" name="knob_large.png" compile="0" resource="1" file="Source/BinaryData/knob_large.png"/>

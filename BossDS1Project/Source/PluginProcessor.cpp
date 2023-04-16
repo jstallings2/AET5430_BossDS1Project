@@ -152,9 +152,22 @@ void BossDS1ProjectAudioProcessor::processBlock (juce::AudioBuffer<float>& buffe
     // interleaved by keeping the same state.
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        auto* channelData = buffer.getWritePointer (channel);
+        // Get updated parameter values from the editor
+        distEffect.setDist(dist);
+        distEffect.setTone(tone);
+        distEffect.setLevel(level);
+        
+        // Have a loop to go through each of the samples in our signal
+        for (int n = 0 ; n < buffer.getNumSamples() ; ++n)
+        {
+            float x = buffer.getWritePointer(channel) [n];
 
-        // ..do something to the data...
+            // Perform the distortion effect on the sample
+            x = distEffect.processSample(x, channel);
+
+            // scales amplitude by level - this may go in the circuitChain code in which case we'll take it out
+            buffer.getWritePointer(channel) [n] = x * level;
+        }
     }
 }
 

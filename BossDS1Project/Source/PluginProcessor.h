@@ -9,6 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "DS1DistortionEffect.h"
 
 //==============================================================================
 /**
@@ -54,13 +55,13 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     
     // Parameters
-    float level;
-    float dist;
-    float tone;
+    float level = 1.0f; // all 0 to 1
+    float dist = 0.0f;
+    float tone = 0.5f;
 
 private:
     
-    
+    DS1DistortionEffect distEffect;
     
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BossDS1ProjectAudioProcessor)

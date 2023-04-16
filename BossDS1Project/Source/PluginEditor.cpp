@@ -22,7 +22,7 @@ BossDS1ProjectAudioProcessorEditor::BossDS1ProjectAudioProcessorEditor (BossDS1P
     levelKnob.setLookAndFeel(&smallKnobLNF);
     // Specify location in window (xPos,yPos,width,height)
     levelKnob.setBounds(115,90,100,100);
-    levelKnob.setValue(0.5); // initial value
+    levelKnob.setValue(1.0); // initial value
     levelKnob.setRange(0,1); // (min, max, interval)
     levelKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
     levelKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 75, 25);
@@ -33,7 +33,7 @@ BossDS1ProjectAudioProcessorEditor::BossDS1ProjectAudioProcessorEditor (BossDS1P
     distKnob.setLookAndFeel(&smallKnobLNF);
     // Specify location in window (xPos,yPos,width,height)
     distKnob.setBounds(200,25,100,100);
-    distKnob.setValue(0.5); // initial value
+    distKnob.setValue(0.0); // initial value
     distKnob.setRange(0,1); // (min, max, interval)
     distKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
     distKnob.setTextBoxStyle(juce::Slider::NoTextBox, false, 75, 25);
