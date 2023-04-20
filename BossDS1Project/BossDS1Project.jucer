@@ -32,8 +32,8 @@
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" targetName="BossDS1Project"/>
-        <CONFIGURATION isDebug="0" name="Release" targetName="BossDS1Project"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="BossDS1Project" headerPath="/Users/jacobstallings/AET5430_BossDS1Project/BossDS1Project/PointToPoint_LT/sdks/PointToPoint/macos/incl"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="BossDS1Project" headerPath="/Users/jacobstallings/AET5430_BossDS1Project/BossDS1Project/PointToPoint_LT/sdks/PointToPoint/macos/incl"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
