@@ -11,9 +11,8 @@
 #pragma once
 
 #include "AudioEffect.h"
-//#include "../PointToPoint_LT/sdks/PointToPoint_LT/macos/incl/Circuit.h"
-
-class DS1DistortionEffect : public AudioEffect {
+#include "PointToPoint_LT/sdks/PointToPoint_LT/macos/incl/Circuit.h"
+class DS1DistortionEffect : public AudioEffect, public PointToPoint_LT::Circuit {
 public:
     
     // Ciruit: Override the constructor and add the layout
