@@ -172,7 +172,7 @@ void BossDS1ProjectAudioProcessor::processBlock (juce::AudioBuffer<float>& buffe
             x = distEffect.processSample(x, channel);
 
             // scales amplitude by level - this may go in the circuitChain code in which case we'll take it out
-            buffer.getWritePointer(channel) [n] = x * level;
+            buffer.getWritePointer(channel) [n] = x * distEffect.getLevel();
         }
     }
 }

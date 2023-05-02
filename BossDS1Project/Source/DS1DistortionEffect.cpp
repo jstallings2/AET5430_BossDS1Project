@@ -13,17 +13,29 @@
 float DS1DistortionEffect::processSample(float x, const int c) {
     
     if(IS_SIMPLE_DIST)
-        x = (2.f/M_PI) * atan(x * (9*dist+1)); // drive needs to be from 1 to 10    
+        x = (2.f/M_PI) * atan(x * (9*getDist()+1));
     return x;
     
 }
 
-float DS1DistortionEffect::getDist() { return dist; }
+void DS1DistortionEffect::prepareToPlay(float sampleRate, int samplesPerBlock){
+    sDist.reset(sampleRate, 0.1); // 100 ms smoothing response time
+    sLevel.reset(sampleRate, 0.1);
+    super::prepareToPlay(sampleRate, samplesPerBlock); // let AudioEffect do the rest
+}
 
-void DS1DistortionEffect::setDist(float dist) { this->dist = dist; }
+float DS1DistortionEffect::getDist() { return sDist.getNextValue(); }
 
-float DS1DistortionEffect::getLevel() { return level; }
+void DS1DistortionEffect::setDist(float dist) {
+    sDist.setTargetValue(dist);
+}
 
-void DS1DistortionEffect::setLevel(float level) { this->level = level; }
+float DS1DistortionEffect::getLevel() { return sLevel.getNextValue(); }
+
+void DS1DistortionEffect::setLevel(float level) {
+    sLevel.setTargetValue(level);
+}
+
+
 
 

@@ -55,13 +55,11 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     
     // Parameters
-    float level = 1.0f; // all 0 to 1
-    float dist = 0.0f;
 
 private:
     
     DS1DistortionEffect distEffect;
-    
+        
 public:
     juce::AudioProcessorValueTreeState state;
     

@@ -18,6 +18,8 @@ public:
     
     virtual float processSample(float x, const int c);
     
+    void prepareToPlay(float sampleRate, int samplesPerBlock);
+    
     float getDist();
     void setDist(float dist);
     
@@ -25,8 +27,10 @@ public:
     void setLevel(float level);
     
 private:
-    float dist;
-    float level;
+    typedef AudioEffect super;
+    
     const bool IS_SIMPLE_DIST = true; // if true = run cubic dist, false = full DS1 chain
     
+    juce::SmoothedValue<float, juce::ValueSmoothingTypes::Linear> sDist = {0.f};
+    juce::SmoothedValue<float, juce::ValueSmoothingTypes::Linear> sLevel = {0.f};
 };
