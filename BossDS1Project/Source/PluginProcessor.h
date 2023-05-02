@@ -57,11 +57,15 @@ public:
     // Parameters
     float level = 1.0f; // all 0 to 1
     float dist = 0.0f;
-    float tone = 0.5f;
 
 private:
     
     DS1DistortionEffect distEffect;
+    
+public:
+    juce::AudioProcessorValueTreeState state;
+    
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BossDS1ProjectAudioProcessor)

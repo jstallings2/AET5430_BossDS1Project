@@ -13,16 +13,10 @@
 float DS1DistortionEffect::processSample(float x, const int c) {
     
     if(IS_SIMPLE_DIST)
-        x = (2.f/M_PI) * atan(x * (9*dist+1)); // drive needs to be from 1 to 10
-    // else TODO - implement DS1 chain
-    
+        x = (2.f/M_PI) * atan(x * (9*dist+1)); // drive needs to be from 1 to 10    
     return x;
     
 }
-
-float DS1DistortionEffect::getTone() { return tone; }
-
-void DS1DistortionEffect::setTone(float tone) { this->tone = tone; }
 
 float DS1DistortionEffect::getDist() { return dist; }
 

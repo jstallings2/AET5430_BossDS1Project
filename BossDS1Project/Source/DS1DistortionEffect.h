@@ -18,9 +18,6 @@ public:
     
     virtual float processSample(float x, const int c);
     
-    float getTone();
-    void setTone(float tone);
-    
     float getDist();
     void setDist(float dist);
     
@@ -28,7 +25,6 @@ public:
     void setLevel(float level);
     
 private:
-    float tone;
     float dist;
     float level;
     const bool IS_SIMPLE_DIST = true; // if true = run cubic dist, false = full DS1 chain

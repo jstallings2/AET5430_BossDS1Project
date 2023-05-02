@@ -15,8 +15,7 @@
 //==============================================================================
 /**
 */
-class BossDS1ProjectAudioProcessorEditor  : public juce::AudioProcessorEditor,
-                                            public juce::Slider::Listener
+class BossDS1ProjectAudioProcessorEditor  : public juce::AudioProcessorEditor
 {
 public:
     BossDS1ProjectAudioProcessorEditor (BossDS1ProjectAudioProcessor&);
@@ -26,8 +25,6 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
     
-    void sliderValueChanged(juce::Slider*) override;
-
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
@@ -41,6 +38,9 @@ private:
     juce::Slider toneKnob;
     // Level Knob
     juce::Slider levelKnob;
+    
+public:
+    std::vector<std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment>> sliderAttachment;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BossDS1ProjectAudioProcessorEditor)
 };

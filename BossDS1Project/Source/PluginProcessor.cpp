@@ -19,7 +19,7 @@ BossDS1ProjectAudioProcessor::BossDS1ProjectAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ), state(*this, nullptr, "DS1Params", createParameterLayout())
 #endif
 {
 }
@@ -150,12 +150,18 @@ void BossDS1ProjectAudioProcessor::processBlock (juce::AudioBuffer<float>& buffe
     // the samples and the outer loop is handling the channels.
     // Alternatively, you can process the samples with the channels
     // interleaved by keeping the same state.
+    
+    // Get updated parameter values from the editor
+    
+    float dist = *state.getRawParameterValue("distValue");
+    float level = *state.getRawParameterValue("levelValue");
+    
+    distEffect.setDist(dist);
+    distEffect.setLevel(level);
+    
+    
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        // Get updated parameter values from the editor
-        distEffect.setDist(dist);
-        distEffect.setTone(tone);
-        distEffect.setLevel(level);
         
         // Have a loop to go through each of the samples in our signal
         for (int n = 0 ; n < buffer.getNumSamples() ; ++n)
@@ -201,4 +207,23 @@ void BossDS1ProjectAudioProcessor::setStateInformation (const void* data, int si
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new BossDS1ProjectAudioProcessor();
+}
+
+juce::AudioProcessorValueTreeState::ParameterLayout BossDS1ProjectAudioProcessor::createParameterLayout() {
+    std::vector<std::unique_ptr<juce::RangedAudioParameter>> params;
+    
+    params.push_back(std::make_unique<juce::AudioParameterFloat>("distValue",
+                                                                 "Dist",
+                                                                 juce::NormalisableRange<float>(0.f, 1.f),
+                                                                 0.f
+                                                                 ));
+    
+    params.push_back(std::make_unique<juce::AudioParameterFloat>("levelValue",
+                                                                 "Level",
+                                                                 juce::NormalisableRange<float>(0.f, 1.f),
+                                                                 1.f
+                                                                 ));
+    
+    
+    return {params.begin(), params.end()};
 }
