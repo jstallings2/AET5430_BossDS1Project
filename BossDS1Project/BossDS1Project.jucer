@@ -14,60 +14,6 @@
         <FILE id="HeWBT9" name="knob_large.png" compile="0" resource="1" file="Source/BinaryData/knob_large.png"/>
         <FILE id="VOgKlS" name="knob_small.png" compile="0" resource="1" file="Source/BinaryData/knob_small.png"/>
       </GROUP>
-      <GROUP id="{45E9FD92-D4C3-A53C-A7F8-1AB401C346C6}" name="PointToPoint_LT">
-        <GROUP id="{444FF7D3-A926-3AA1-DBBC-F6080BEA97A5}" name="sdks">
-          <GROUP id="{667DAA98-84D2-4A4C-4F97-B6A433B170F9}" name="PointToPoint_LT">
-            <GROUP id="{D4E4ADBF-6DF2-F4F1-ACE2-B0104A3C847A}" name="macos">
-              <GROUP id="{044B1903-CEBB-06CF-8D74-DDF1F3082F07}" name="incl">
-                <FILE id="XNR7Cl" name="Circuit.h" compile="0" resource="0" file="Source/PointToPoint_LT/sdks/PointToPoint_LT/macos/incl/Circuit.h"/>
-                <FILE id="AjTwye" name="CircuitElement.h" compile="0" resource="0"
-                      file="Source/PointToPoint_LT/sdks/PointToPoint_LT/macos/incl/CircuitElement.h"/>
-                <FILE id="FVm2Yd" name="CircuitModel.h" compile="0" resource="0" file="Source/PointToPoint_LT/sdks/PointToPoint_LT/macos/incl/CircuitModel.h"/>
-              </GROUP>
-              <GROUP id="{74F9A862-432B-852B-2393-2AE380F0BF94}" name="lib">
-                <GROUP id="{3D0ABB34-AD78-80BD-01D7-EFC839452133}" name="Debug">
-                  <FILE id="g7hgan" name="libCircuitModel.a" compile="0" resource="1"
-                        file="Source/PointToPoint_LT/sdks/PointToPoint_LT/macos/lib/Debug/libCircuitModel.a"/>
-                </GROUP>
-                <GROUP id="{26BEF887-1A9C-05D1-3FB4-8DA7BCA7170D}" name="Release">
-                  <FILE id="ZmHvtv" name="libCircuitModel.a" compile="0" resource="1"
-                        file="Source/PointToPoint_LT/sdks/PointToPoint_LT/macos/lib/Release/libCircuitModel.a"/>
-                </GROUP>
-              </GROUP>
-            </GROUP>
-            <GROUP id="{6118EA51-C0D4-2ADE-5A54-2CB8A1F6D2B7}" name="win">
-              <GROUP id="{6BF3B1EC-3C0E-09D2-CD57-216F643BC5BF}" name="incl">
-                <FILE id="uCMxgo" name="Circuit.h" compile="0" resource="0" file="Source/PointToPoint_LT/sdks/PointToPoint_LT/win/incl/Circuit.h"/>
-                <FILE id="cUC6r6" name="CircuitElement.h" compile="0" resource="0"
-                      file="Source/PointToPoint_LT/sdks/PointToPoint_LT/win/incl/CircuitElement.h"/>
-                <FILE id="ooVopG" name="CircuitModel.h" compile="0" resource="0" file="Source/PointToPoint_LT/sdks/PointToPoint_LT/win/incl/CircuitModel.h"/>
-              </GROUP>
-              <GROUP id="{18892F54-AF73-0439-9ED4-157E2FC022B4}" name="lib">
-                <GROUP id="{4D267F55-C4AE-2026-96AE-20DA0E4CFD7C}" name="x64">
-                  <GROUP id="{BC962168-023A-E450-8AD9-69D710BD1CA3}" name="Debug">
-                    <FILE id="Zc46tJ" name="CircuitModel.lib" compile="0" resource="1"
-                          file="Source/PointToPoint_LT/sdks/PointToPoint_LT/win/lib/x64/Debug/CircuitModel.lib"/>
-                  </GROUP>
-                  <GROUP id="{3170DF56-4DF0-BC30-E567-422B617E5BF1}" name="Release">
-                    <FILE id="GrHCaP" name="CircuitModel.lib" compile="0" resource="1"
-                          file="Source/PointToPoint_LT/sdks/PointToPoint_LT/win/lib/x64/Release/CircuitModel.lib"/>
-                  </GROUP>
-                </GROUP>
-                <GROUP id="{43168E46-3892-DC05-9E04-3C3D46BBC536}" name="x86">
-                  <GROUP id="{3C6B620D-7D0E-19D7-3072-976B3D4511CD}" name="Debug">
-                    <FILE id="Fh0I40" name="CircuitModel.lib" compile="0" resource="1"
-                          file="Source/PointToPoint_LT/sdks/PointToPoint_LT/win/lib/x86/Debug/CircuitModel.lib"/>
-                  </GROUP>
-                  <GROUP id="{4EF2EE16-7B5E-308D-53F7-DD4A4DA11D7B}" name="Release">
-                    <FILE id="IDgmPM" name="CircuitModel.lib" compile="0" resource="1"
-                          file="Source/PointToPoint_LT/sdks/PointToPoint_LT/win/lib/x86/Release/CircuitModel.lib"/>
-                  </GROUP>
-                </GROUP>
-              </GROUP>
-            </GROUP>
-          </GROUP>
-        </GROUP>
-      </GROUP>
       <FILE id="l3ROoW" name="AudioEffect.cpp" compile="1" resource="0" file="Source/AudioEffect.cpp"/>
       <FILE id="t59S29" name="AudioEffect.h" compile="0" resource="0" file="Source/AudioEffect.h"/>
       <FILE id="vqLZuY" name="DS1DistortionEffect.cpp" compile="1" resource="0"
@@ -85,11 +31,10 @@
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX" extraLinkerFlags="-L$/Users/jacobstallings/AET5430_BossDS1Project/BossDS1Project/Source/PointToPoint_LT/sdks/PointToPoint_LT/macos/lib/Debug&#10;-lCircuitModel&#10;-L$/Users/jacobstallings/AET5430_BossDS1Project/BossDS1Project/Source/PointToPoint_LT/sdks/PointToPoint_LT/macos/lib/Release&#10;-lCircuitModel"
-               externalLibraries="CircuitModel" extraCompilerFlags="-DH5_USE_110_API">
+    <XCODE_MAC targetFolder="Builds/MacOSX">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" targetName="BossDS1Project" libraryPath="/Users/jacobstallings/AET5430_BossDS1Project/BossDS1Project/Source/PointToPoint_LT/sdks/PointToPoint_LT/macos/lib/Debug"/>
-        <CONFIGURATION isDebug="0" name="Release" targetName="BossDS1Project" libraryPath="/Users/jacobstallings/AET5430_BossDS1Project/BossDS1Project/Source/PointToPoint_LT/sdks/PointToPoint_LT/macos/lib/Release"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="BossDS1Project"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="BossDS1Project"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>

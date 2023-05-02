@@ -17,26 +17,8 @@ namespace BinaryData
     extern const char*   knob_small_png;
     const int            knob_small_pngSize = 5457;
 
-    extern const char*   libCircuitModel_a;
-    const int            libCircuitModel_aSize = 379816;
-
-    extern const char*   libCircuitModel_a2;
-    const int            libCircuitModel_a2Size = 612264;
-
-    extern const char*   CircuitModel_lib;
-    const int            CircuitModel_libSize = 1356892;
-
-    extern const char*   CircuitModel_lib2;
-    const int            CircuitModel_lib2Size = 703994;
-
-    extern const char*   CircuitModel_lib3;
-    const int            CircuitModel_lib3Size = 1002040;
-
-    extern const char*   CircuitModel_lib4;
-    const int            CircuitModel_lib4Size = 702212;
-
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 9;
+    const int namedResourceListSize = 3;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
